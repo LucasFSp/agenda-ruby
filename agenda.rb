@@ -21,6 +21,15 @@ def add_contato
 
 end
 
+def ver_contato
+    print "DIgite o nome desejado: "
+    nome = gets.chomp
+
+    @agenda.each do |contato|
+        if contato[:nome].downcase.include?(nome.downcase)
+            
+end
+
 loop do
 
 puts "1. Contatos\n2. Adicionar Contatos\n3. Ver contato\n4. Editar Contato\n5. Remover Contato\n0. Sair"
@@ -34,6 +43,12 @@ puts "1. Contatos\n2. Adicionar Contatos\n3. Ver contato\n4. Editar Contato\n5. 
         todos_contatos
     when codigo == 2
         add_contato
+    when codigo == 3
+        ver_contato
+    #when codigo == 4
+     #   editar_contato
+    #when codigo == 5
+     #   remover_contato
     end
 
 
